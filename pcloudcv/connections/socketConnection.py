@@ -1,5 +1,6 @@
 import threading
-
+import pickle
+import sys
 from socketIO_client import SocketIO
 import redis
 from colorama import init
@@ -118,7 +119,10 @@ class SocketIOConnection(threading.Thread):
             job.job.jobinfo = message['jobinfo']
 
         if ('data' in message):
-            logging.log('O', message['data'])
+            print "Haha. Got you" + message['data']
+  	    with open('labels.pickle', 'wb') as handle:
+		pickle.dump(message['data'], handle)
+	    logging.log('O', message['data'])
             job.job.output = message['data']
 
             if(job.job.jobid is None):
@@ -178,7 +182,7 @@ class SocketIOConnection(threading.Thread):
         if ('request_data' in message):
             print 'Data request from Server'
             self._socket_io.emit('send_message', 'data')
-
+	    print 'Data printed'
         if ('exit' in message):
             logging.log('W', message['exit'])
             self._redis_obj.publish('intercomm', '***end***')
@@ -197,7 +201,7 @@ class SocketIOConnection(threading.Thread):
             socketio = self._socket_io
             self._socket_io.wait()
             print 'Socket waiting finished. \n'
-
+        
         except Exception as e:
             logging.log('W', e)
             raise SystemExit

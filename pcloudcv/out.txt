@@ -1,0 +1,58 @@
+CherryPy Checker:
+The Application mounted at '' has an empty config.
+
+Added Path: /home/kumar/pcloudcv/pcloudcv
+{}
+[35mStarting Listening to Redis Channel for HTTP Post Requests
+[39m
+Press Any Key to Continue...
+[35mListening to Redis Channel
+[39m
+[35mStarting Socket Connection Thread
+[39m
+Connected using websockets
+SocketID:  Gq268c_5oP4pV7W6NMAZ
+[35mStarting Post Request
+[39m
+HnA4OCeNDhOkXwnaYxKS2yiNDEABFvzU
+HnA4OCeNDhOkXwnaYxKS2yiNDEABFvzU
+Resized image already present in the directory
+No of files to be uploaded:  1
+[36mSource Path: local: /home/kumar/images/
+[39m
+[36mExecutable: classify
+[39m
+[36mExecutable Params: {}
+[39m
+SocketID:  Gq268c_5oP4pV7W6NMAZ
+[36mStarting The POST request
+[39m
+[34mServer: Post Request Recieved
+[39m
+[34mProcessing files
+[39m
+[34mFiles Stored. Waiting for one of the worker nodes to handle this request
+[39m
+{u'count': 1, u'result_path': u'/home/ubuntu/cloudcv/cloudcv17/cloudcv17/media/pictures/cloudcv/anonymous/M6hYyUq7M7YsdCrqvzJEG6', u'image_path': u'/home/ubuntu/cloudcv/cloudcv17/cloudcv17/media/pictures/cloudcv/anonymous/M6hYyUq7M7YsdCrqvzJEG6', u'exec': u'classify', u'url': u'/media/pictures/cloudcv/anonymous/M6hYyUq7M7YsdCrqvzJEG6', u'socketid': u'Gq268c_5oP4pV7W6NMAZ', u'dropbox_token': None, u'userid': u'anonymous', u'jobid': u'M6hYyUq7M7YsdCrqvzJEG6', u'source_type': u'local', u'token': u'HnA4OCeNDhOkXwnaYxKS2yiNDEABFvzU', u'params': u'{}', u'dir': u'/home/ubuntu/cloudcv/cloudcv17/cloudcv17/media/pictures/cloudcv/anonymous/M6hYyUq7M7YsdCrqvzJEG6'}
+[36mInfo:   Please wait while CloudCV runs your job request
+[39m
+[35mExiting From the Post Request Thread
+[39m
+Received JobID: M6hYyUq7M7YsdCrqvzJEG6
+Data request from Server
+Data printed
+[34m{"macaw.jpg": [["macaw", "0.658699"], ["toucan", "0.0721909"], ["bobsled, bobsleigh, bob", "0.0708925"], ["toyshop", "0.0580086"], ["peacock", "0.00832757"]]}
+[39m
+Data Received from Server
+[35mExiting Redis Thread for HTTP Post requests
+[39m
+[35mEnding Listening to Redis Channel
+[39m
+Lost connection (Connection closed)
+Socket waiting finished. 
+
+[35mExiting Socket Connection Thread
+[39m
+
+You pressed Ctrl+C! Exiting Now
+Local Server Stopped

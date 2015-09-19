@@ -2,7 +2,7 @@ from pcloudcv import PCloudCV
 import signal
 import argparse
 import os
-
+TIMEOUT = 10
 #------------------------------Initial Setup :- Argument Parser--------------------------
 parser = argparse.ArgumentParser()
 parser.add_argument("config", type=str, help="Full Path to config file")
@@ -35,7 +35,8 @@ if __name__ == "__main__":
         p.dropbox_authenticate()
         
     print "Press Any Key to Continue..."
-    raw_input()
-
+    #raw_input()
+    signal.alarm(TIMEOUT)
     p.start()
     signal.pause()
+    signal.alarm(0)
